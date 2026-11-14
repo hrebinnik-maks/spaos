@@ -21,7 +21,7 @@ chmod +x count_files.sh
 ./count_files.sh /home/user txt
 ```
 
-#Автор
+## Автор
 
 Студент групи ПІ-242
 Гребінник М. М.
