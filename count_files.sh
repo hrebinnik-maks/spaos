@@ -22,7 +22,7 @@ ext_count=$(find "$TARGET_DIR" -maxdepth 1 -type f -name "*.$EXTENSION" | wc -l)
 recursive_count=$(find "$TARGET_DIR" -type f | wc -l)
 
 # Загальний розмір файлів із заданим розширенням
-total_size=$(find "$TARGET_DIR" -type f -name "*.$EXTENSION" -printf '%s\n' | awk '{sum += $1} END {print sum}')
+total_size=$(find "$TARGET_DIR" -type f -name "*.$EXTENSION" -printf '%s\n' | awk '{sum += $1} END {print sum+0}')
 
 # Виведення результатів
 echo "======================================"
