@@ -13,3 +13,9 @@
 # Build directories
 build/
 dist/
+
+# RPM build files
+*.rpm
+*.src.rpm
+*.tar.gz
+rpmbuild/
