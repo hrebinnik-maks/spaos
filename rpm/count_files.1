@@ -1,0 +1,26 @@
+.TH COUNT_FILES 1 "November 2026" "count-files 1.0" "User Commands"
+.SH NAME
+count_files \- count files in a directory
+.SH SYNOPSIS
+.B count_files
+.RI [ directory ]
+.RI [ extension ]
+.SH DESCRIPTION
+Count files in the specified directory and its subdirectories.
+Display the number of files and their total size in bytes.
+.SH OPTIONS
+.TP
+.B directory
+Directory to search. Default: /etc.
+.TP
+.B extension
+File extension to search for. Default: conf.
+.SH EXAMPLES
+.TP
+.B count_files
+Count .conf files in /etc.
+.TP
+.B count_files /home/user txt
+Count .txt files in /home/user and its subdirectories.
+.SH AUTHOR
+Maksym Hrebinnyk

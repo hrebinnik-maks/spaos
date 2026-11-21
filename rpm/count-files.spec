@@ -1,6 +1,6 @@
 Name:           count-files
 Version:        1.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Bash script for counting files
 
 License:        MIT
@@ -23,6 +23,8 @@ including recursive search and file size calculation.
 %install
 mkdir -p %{buildroot}%{_bindir}
 install -m 755 count_files.sh %{buildroot}%{_bindir}/count_files
+mkdir -p %{buildroot}%{_mandir}/man1
+install -m 644 count_files.1 %{buildroot}%{_mandir}/man1/count_files.1
 
 %pre
 echo "Preparing to install count-files..."
@@ -33,8 +35,12 @@ echo "Run 'sudo count_files' to use the script."
 
 %files
 %{_bindir}/count_files
+%{_mandir}/man1/count_files.1*
 
 %changelog
-* Thu Nov 12 2026 Maksym Hrebinnyk - 1.0-1
+* Fri Nov 13 2026 Maksym Hrebinnyk <grebinnikmaksim8@gmail.com> - 1.0-2
+- Add man page to package
+
+* Thu Nov 12 2026 Maksym Hrebinnyk <grebinnikmaksim8@gmail.com> - 1.0-1
 - Initial release
 
