@@ -1,4 +1,4 @@
-.TH COUNT_FILES 1 "November 2026" "count-files 1.0" "User Commands"
+.TH COUNT_FILES 1 "November 2026" "count-files 2.0" "User Commands"
 .SH NAME
 count_files \- count files in a directory
 .SH SYNOPSIS
@@ -8,6 +8,9 @@ count_files \- count files in a directory
 .SH DESCRIPTION
 Count files in the specified directory and its subdirectories.
 Display the number of files and their total size in bytes.
+
+Default settings are loaded from /etc/count-files.conf.
+Command-line arguments override configuration settings.
 .SH OPTIONS
 .TP
 .B directory
@@ -15,12 +18,16 @@ Directory to search. Default: /etc.
 .TP
 .B extension
 File extension to search for. Default: conf.
+.SH FILES
+.TP
+.B /etc/count-files.conf
+Configuration file containing default directory and extension.
 .SH EXAMPLES
 .TP
 .B count_files
-Count .conf files in /etc.
+Count files using the default or configured settings.
 .TP
 .B count_files /home/user txt
-Count .txt files in /home/user and its subdirectories.
+Count files in /home/user using the txt extension.
 .SH AUTHOR
 Maksym Hrebinnyk

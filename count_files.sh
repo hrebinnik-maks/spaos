@@ -2,9 +2,18 @@
 
 # Скрипт для підрахунку файлів у директорії
 
-# Директорія та розширення файлів
-TARGET_DIR="${1:-/etc}"
-EXTENSION="${2:-conf}"
+# Значення за замовчуванням
+TARGET_DIR="/etc"
+EXTENSION="conf"
+
+# Зчитування конфігураційного файлу
+if [ -f /etc/count-files.conf ]; then
+    source /etc/count-files.conf
+fi
+
+# Параметри командного рядка
+TARGET_DIR="${1:-$TARGET_DIR}"
+EXTENSION="${2:-$EXTENSION}"
 
 # Перевірка існування директорії
 if [ ! -d "$TARGET_DIR" ]; then
